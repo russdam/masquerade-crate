@@ -14,5 +14,9 @@
 // # You should have received a copy of the GNU General Public License
 // # along with Masquerade. If not, see <https://www.gnu.org/licenses/>.
 
-mod components;
-mod libraries;
+// Libraries
+// Prefix .masquerade-library (custom, user created libraries are in the project root)
+// Format: zip file containing
+// library.kdl - definition file
+// ./resources/
+// ./widgets/

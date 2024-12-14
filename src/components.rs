@@ -14,5 +14,19 @@
 // # You should have received a copy of the GNU General Public License
 // # along with Masquerade. If not, see <https://www.gnu.org/licenses/>.
 
-mod components;
-mod libraries;
+// components
+// Prefix .component
+// Format: zip file containing
+// component.kdl - definition file
+// ./designer.rs
+// ./runtime.rs
+// ./resources/
+
+//              Library Process
+//  Host --->    Stub.rs ---> Mod Component [component.rs functions]
+//       <---------|
+// masquerade component add function checks for:
+//                  - rustup present
+//                  - correct toolchain version present
+//                  - optionally download missing toolchain
+//                  - build library with component added
