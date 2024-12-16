@@ -17,7 +17,7 @@ rust_2024_compatibility = { level = "warn", priority = -1 }
 unused = { level = "warn", priority = -1 }
 warnings = { level = "warn", priority = -1 }
 
-# We also warn on a set of individual lints that are nnt included in any group
+# individual lints that are not included in any group
 dead_code = "warn"
 trivial_casts = "warn"
 trivial_numeric_casts = "warn"
@@ -26,12 +26,23 @@ unused_import_braces = "warn"
 unused_lifetimes = "warn"
 unused_macro_rules = "warn"
 unused_qualifications = "warn"
+unused_must_use = "deny"
 
 [lints.clippy]
 # Lint groups are set to warn so new lints are used as they become available
 complexity = { level = "warn", priority = -1 }
-correctness = { level = "warn", priority = -1 }
+correctness = { level = "deny", priority = -1 }
 pedantic = { level = "warn", priority = -1 }
 perf = { level = "warn", priority = -1 }
 style = { level = "warn", priority = -1 }
 suspicious = { level = "warn", priority = -1 }
+cargo = { level = "warn", priority = -1 }
+
+
+# We also check for the following individual clippy lints
+panic = "deny"
+unwrap_used = "deny"
+expect_used = "warn"
+multiple-crate-versions = "allow"
+wildcard_dependencies = "forbid"
+wildcard_imports = "deny"
